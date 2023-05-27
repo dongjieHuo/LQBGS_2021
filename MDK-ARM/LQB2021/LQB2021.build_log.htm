@@ -1,0 +1,116 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=47GU5-G6XXV-X7LRZ-J6QIV-53ITF-XHMIA
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      CMSIS_AGDI.dll V1.33.12.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+c:\Users\14227\Desktop\STM32Project\course\LQB2021\MDK-ARM\LQB2021.uvprojx
+Project File Date:  05/25/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'LQB2021'
+compiling main.c...
+../Core/Src/main.c(132): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      if(PA6_Duty < 0.1) a =0;
+../Core/Src/main.c(133): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      else if(PA6_Duty > 0.9) a = 180;
+../Core/Src/main.c(134): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      else a = 225*PA6_Duty - 22.5;
+../Core/Src/main.c(150): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      if(PA7_Duty < 0.1) b =0;
+../Core/Src/main.c(151): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      else if(PA7_Duty > 0.9) b = 90;
+../Core/Src/main.c(152): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      else b = 112.5*PA7_Duty - 11.25;
+../Core/Src/main.c(122): warning:  #177-D: variable "temp"  was declared but never referenced
+      float temp;
+../Core/Src/main.c(222): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+          sprintf(str,"   a:%.1f      ",a);
+../Core/Src/main.c(224): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+          sprintf(str,"   b:%.1f      ",b);
+../Core/Src/main.c(226): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+          sprintf(str,"   f:%.0fHz      ",f);
+../Core/Src/main.c(228): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+          sprintf(str,"   ax:%.0f      ",ax);
+../Core/Src/main.c(230): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+          sprintf(str,"   bx:%.0f      ",bx);
+../Core/Src/main.c(240): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+          sprintf(str,"   pax:%.0f      ",pax);
+../Core/Src/main.c(242): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+          sprintf(str,"   pbx:%.0f      ",pbx);
+../Core/Src/main.c(244): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+          sprintf(str,"   pf:%.0f       ",pf);
+../Core/Src/main.c(453): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                  sprintf(Tx_Buf,"a:%.1f\r\n",a);
+../Core/Src/main.c(454): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                  HAL_UART_Transmit_IT(&huart1,Tx_Buf, strlen(Tx_Buf));
+../Core/Src/main.c(458): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                  sprintf(Tx_Buf,"b:%.1f\r\n",b);
+../Core/Src/main.c(459): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                  HAL_UART_Transmit_IT(&huart1,Tx_Buf, strlen(Tx_Buf));                
+../Core/Src/main.c(466): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                  sprintf(Tx_Buf,"%.1f-%.1f-%.1f-%.1f-%.1f\r\n",a_store[0],a_store[1],a_store[2],a_store[3],a_store[4]);
+../Core/Src/main.c(467): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                  HAL_UART_Transmit_IT(&huart1,Tx_Buf, strlen(Tx_Buf));
+../Core/Src/main.c(471): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                  sprintf(Tx_Buf,"%.1f-%.1f-%.1f-%.1f-%.1f\r\n",b_store[0],b_store[1],b_store[2],b_store[3],b_store[4]);
+../Core/Src/main.c(472): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                  HAL_UART_Transmit_IT(&huart1,Tx_Buf, strlen(Tx_Buf));
+../Core/Src/main.c(488): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                  sprintf(Tx_Buf,"%.1f-%.1f-%.1f-%.1f-%.1f\r\n",a_rk[0],a_rk[1],a_rk[2],a_rk[3],a_rk[4]);
+../Core/Src/main.c(489): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                  HAL_UART_Transmit_IT(&huart1,Tx_Buf, strlen(Tx_Buf));
+../Core/Src/main.c(505): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+                  sprintf(Tx_Buf,"%.1f-%.1f-%.1f-%.1f-%.1f\r\n",b_rk[0],b_rk[1],b_rk[2],b_rk[3],b_rk[4]);
+../Core/Src/main.c(506): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+                  HAL_UART_Transmit_IT(&huart1,Tx_Buf, strlen(Tx_Buf));
+../Core/Src/main.c: 27 warnings, 0 errors
+linking...
+Program Size: Code=26146 RO-data=5306 RW-data=116 ZI-data=5108  
+FromELF: creating hex file...
+"LQB2021\LQB2021.axf" - 0 Error(s), 27 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32G4xx_DFP.1.4.0.pack
+                Keil.STM32G4xx_DFP.1.4.0
+                STMicroelectronics STM32G4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_LQB2021
+  D:/Users/14227/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/Users/14227/AppData/Local/Arm/Packs/Keil/STM32G4xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
